@@ -1,15 +1,173 @@
-\documentclass[11pt,a4paper,sans]{moderncv}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
 
-\input{includes/prelude}
+\documentclass[9pt]{developercv}
+\usepackage{multicol}
+\setlength{\columnsep}{0mm}
+%----------------------------------------------------------------------------------------
+\usepackage{lipsum}  
+
 
 \begin{document}
 
-\input{includes/header}
-\input{includes/about}
-\input{includes/area}
-\input{includes/experience}
-\input{includes/education}
-\input{includes/skills}
-\input{includes/language}
+%----------------------------------------------------------------------------------------
+%	TITLE AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.5\textwidth} 
+	\vspace{-\baselineskip}
+	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Гордеев Александр}}}}
+	
+	\vspace{6pt}
+	
+	{\Large Fullstack Developer}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\textwidth}
+	\vspace{-\baselineskip}
+    \faIcon{phone}{ +7 }{(920) 338-95-98}\\\\
+    \faIcon{telegram}{\href{https://t.me/almanelis}{ t.me/almanelis}}\\\\
+    \faIcon{map-marker}{ Москва, Россия}\\
+	
+\end{minipage}
+\begin{minipage}[t]{0.27\textwidth}
+	\vspace{-\baselineskip}
+	\faIcon{envelope}{\href{mailto:alexgordeev231@gmail.com}{ alexgordeev231@gmail.com}}\\\\
+    \faIcon{github}{\href{https://github.com/almanelis}{ github.com/almanelis}}\\
+       
+    
+\end{minipage}
+
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION, SKILLS AND TECHNOLOGIES
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.46\textwidth}
+    \cvsect{Обо мне}
+	\vspace{-6pt}
+ 
+        Fullstack разработчик в медицине, студент Сеченовского Университета по направлению обучения Информационные
+        системы и технологии. Занимаюсь разработкой сервисов в медицине, анализом данных, интеграцией нейросетевых
+        моделей.
+        \\
+\end{minipage}
+\hfill % Whitespace between
+\begin{minipage}[t]{0.465\textwidth}
+    \cvsect{Область специализации}
+    \vspace{-6pt}
+    
+    Web - Backend - Frontend - Data Analyse - \\
+    Search engines - NER - CNN - Medical Image Processing - Open Source software
+    
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+%	Projects
+%----------------------------------------------------------------------------------------
+\vspace{-10 pt}
+\cvsect{Профессиональный опыт}
+\begin{entrylist}
+    \entry
+		{Разработчик}
+		{ООО "РЛС-Патент"}
+		{04/2023 - н.в.}
+		{
+            \begin{itemize}[itemsep=0.5cm, nolistsep, leftmargin=-2cm]
+                \item Коммерческая разработка сервисов РЛС для последующей интеграцией в МО.
+                \item Разработка сервиса "'РЛС-Противопоказания"' основанного на анализе противопоказаний из инструкций лекарственных препаратов.
+                \item Разработка сервиса "'РЛС-Гармонизация"' для автоматизации сопоставления лекарственных номенклатур.
+                \item Автоматизация разметки с помощью Pandas и регулярных выражений, для последующего использования NLTK, Natasha.
+                \item Обучение лингвистической модели на основе BERT для задачи NER.
+                \item Протототипирование сервисов. Разработка API на Django, нативный фронт с использованием CSS фреймворков. Адаптирование и предоставление данных из PostgreSQL. 
+            \end{itemize}
+            }
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\vspace{-15 pt}
+\cvsect{Высшее образование}
+\begin{entrylist}
+    \entry
+		{09/2021 -- н.в.}
+		{Сеченовский Университет}
+		{Бакалавриат}
+		{09.03.02 Информационные системы и технологии}
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\vspace{-10 pt}
+\cvsect{Курсы}
+\begin{entrylist}
+	\entry
+        {09/2023 -- 05/2024}
+		{DevOps в медицине}
+		{Ростелеком}
+		{\vspace{-10pt} 
+        \texttt{DevOps инженер}}
+	\entry
+		{09/2023 -- 05/2024}
+		{Разработчик цифровых медицинских сервисов}
+		{Яндекс Практикум}
+		{\vspace{-10pt}
+        \texttt{Backend-разработчик} \slashsep \texttt{Data-science} \slashsep \texttt{Машинное обучение}}
+\end{entrylist}
+
+\vspace{-10 pt}
+\cvsect{Конкурсы}
+\begin{entrylist}
+	\entry
+        {08/2023}
+		{Хакатон INNOGLOBALHACK}
+		{Иннополис}
+		{\vspace{-10pt} \\
+                    \begin{itemize}[nolistsep, leftmargin=-2cm]
+                \item Интеграция API сервиса для организации спринтов в Telegram.
+                \item Разработка телеграм бота на aiogram для работы с CRUD методами API сервиса. 
+            \end{itemize}}
+        \entry
+        {10/2023}
+        {Инженерный хакатон}
+        {Сеченовский Университет}
+        {\vspace{-10pt} \\
+                    \begin{itemize}[nolistsep, leftmargin=-2cm]
+                \item Разработка мобильного приложения с интегрированием CNN модели для распознования и классификации эмоций людей
+с расстройством аутистического спектра.
+
+                \item Организация разметки изображений с помощью DropBox.
+                \item Обучение CNN модели с помощью Keras, TensorFlow, тестирование на OpenCV.
+
+                \item Конвертация модели в TensorFlowLight и её интеграция в локальную архитектуру мобильного приложения на Flutter.
+
+            \end{itemize}}
+\end{entrylist}
+
+\vspace{-10 pt}
+\cvsect{Навыки}
+\textbf{Языки программирования:} {Python(основной), JavaScript, C++, R
+}\\\\
+\textbf{Библиотеки и фреймворки:} {: Django, FastAPI, SqlAlchemy, alembic, Celery, Pandas, Numpy, TensorFlow, Keras,
+OpenCV, NLTK, Natasha, Aoigram, jQuery, TailwindCSS}\\\\
+\textbf{Software:} { Git, Docker, Kubernetes, ElasticSearch, Microsoft Office}\\\\
+\textbf{OS:} {Linux, Windows
+}\\\\
+\textbf{Soft Skills:} {Аналитическое мышление, Планирование, Организация, Креативное решение проблем, Командная
+работа}\\
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+\vspace{-10 pt}
+	\cvsect{Языки}
+    \vspace{-6pt}
+    
+    \hspace{26mm} \textbf{English} - B2, \textbf{ Русский} - родной
+
+%----------------------------------------------------------------------------------------
 
 \end{document}
